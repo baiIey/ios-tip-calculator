@@ -16,7 +16,7 @@ Eight hours spent in total
 - Change the colors and fonts of the views
 
 #### Notes
-Spent time trying to adjust the numeric format of the selected tip percentage. `tipPercentLabel.text = String(format: "%g percent tip", showTip)` prints "percent" instead of "%" because I couldn't figure out how to couple the additional "%" to "%g%"
+Spent time trying to adjust the numeric format of the selected tip percentage. `tipPercentLabel.text = String(format: "%g percent tip", showTip)` prints "percent" instead of "%" because I couldn't figure out how to couple the additional `%` to `%g%`.
 
 Couldn't implement an animation block that contained the initial state and the final state, zero to one, in the same block. Instead, the code for both states rest in `viewDidLoad()` and `onEditingChanged()`, respectively:
 Used 
