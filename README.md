@@ -1,14 +1,14 @@
 # iOS Tip Calculator
+This iOS demo application is part of the prework for selection to [CodePath](http://codepath.com/).
 
-This is an iOS demo application 
+The tip calculator, Gratuity, allows users to enter a numeric amount, select from a range of tip amounts, and calculate the result. It also allows for users to split the bill, sharing the costs with a party two, three, or four others.
 
-Time spent: 5 hours spent in total
+Time spent: Eight hours spent in total
 
 Completed user stories:
-
- * [x] Required: User can view a list of latest box office movies including title, cast and tomatoes rating
+ * [x] Required: User can enter an amount, and perform calculations based on a selection from a given range of tip percentages
  * [x] Required: User can click on a movie in the list to bring up a details page with additional information such as synopsis
- * [x] Optional: Placeholder image is used for movie posters loaded in from the network
+ * [x] Optional: User can 
  
 Notes:
 Spent time trying to adjust the numeric format of the selected tip percentage. tipPercentLabel.text = String(format: "%g percent tip", showTip) prints "percent" instead of "%" because I couldn't figure out how to couple the additional "%" to "%g%"
