@@ -13,7 +13,7 @@ Eight hours spent in total
 #### Other optional tasks
 - Added an app icon and launch image
 - Added a custom font (though wasn't able to select from all the fonts available in Font Book)
-- Change the colors and fonts of the views. 
+- Change the colors and fonts of the views
 
 #### Notes
 Spent time trying to adjust the numeric format of the selected tip percentage. `tipPercentLabel.text = String(format: "%g percent tip", showTip)` prints "percent" instead of "%" because I couldn't figure out how to couple the additional "%" to "%g%"
