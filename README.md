@@ -1,7 +1,3 @@
-iOS-Tip-Calc
-============
-
-
 # iOS Tip Calculator
 
 This is an iOS demo application 
@@ -15,11 +11,14 @@ Completed user stories:
  * [x] Optional: Placeholder image is used for movie posters loaded in from the network
  
 Notes:
+Spent time trying to adjust the numeric format of the selected tip percentage. tipPercentLabel.text = String(format: "%g percent tip", showTip) prints "percent" instead of "%" because I couldn't figure out how to couple the additional "%" to "%g%"
 
-Spent some time making the UI work across multiple phone resolutions by playing around with the RelativeLayout.
+Couldn't implement an animation block that contained the initial state and the final state, zero to one, in the same block. Instead, the code for both states rest onLoad and onEditingChanged, respectively.
 
 Walkthrough of all user stories:
 
 ![Video Walkthrough](anim_rotten_tomatoes.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
+Framework for animation blocks reference guidance from the blog of [Mathew Sanders](http://mathewsanders.com/prototyping-iOS-iPhone-iPad-animations-in-swift/)
+String formats referenced from Microsoft Developer Network's [Standard Numeric Format Strings](http://msdn.microsoft.com/en-us/library/dwhawy9k%28v=vs.110%29.aspx)
