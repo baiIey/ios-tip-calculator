@@ -20,5 +20,7 @@ Couldn't implement an animation block that contained the initial state and the f
 ![Video Walkthrough](anim_rotten_tomatoes.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
 Framework for animation blocks reference guidance from the blog of [Mathew Sanders](http://mathewsanders.com/prototyping-iOS-iPhone-iPad-animations-in-swift/)
+
 String formats referenced from Microsoft Developer Network's [Standard Numeric Format Strings](http://msdn.microsoft.com/en-us/library/dwhawy9k%28v=vs.110%29.aspx)
