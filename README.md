@@ -6,12 +6,18 @@ The tip calculator, Gratuity, allows users to enter a numeric amount, select fro
 #### Time spent
 Eight hours spent in total
 
-#### Completed user stories
+### Completed user stories
  * [x] Required: User can enter an amount, and perform calculations based on a selection from a given range of tip percentages
  * [x] Optional: User can see calculations that split the calculation amount a party of two, three, and four.
  
-#### Notes
-Spent time trying to adjust the numeric format of the selected tip percentage. `tipPercentLabel.text = String(format: "%g percent tip", showTip)` prints "percent" instead of "%" because I couldn't figure out how to couple the additional "%" to "%g%"
+### Notes
+- Added an app icon and launch image
+- Added a custom font (though wasn't able to select from all the fonts available in Font Book)
+- Change the colors and fonts of the views. 
+
+- Spent time trying to adjust the numeric format of the selected tip percentage. `tipPercentLabel.text = String(format: "%g percent tip", showTip)` prints "percent" instead of "%" because I couldn't figure out how to couple the additional "%" to "%g%"
+
+- Couldn't implement an animation block that contained the initial state and the final state, zero to one, in the same block. Instead, the code for both states rest in `viewDidLoad()` and `onEditingChanged()`, respectively:
 
 Used 
 ```
@@ -33,11 +39,7 @@ UIView.animateWithDuration(0.4, animations: {
 })
 ```
 
-Couldn't implement an animation block that contained the initial state and the final state, zero to one, in the same block. 
-
-Instead, the code for both states rest in `viewDidLoad()` and `onEditingChanged()`, respectively.
-
-#### Walkthrough of all user stories
+### Walkthrough of all user stories
 
 ![Video Walkthrough](anim_rotten_tomatoes.gif)
 
