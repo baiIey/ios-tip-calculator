@@ -26,7 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		70D657001A576F8E00D7D6EC /* Tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70D657001A576F8E00D7D6EC /* Gratuity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gratuity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D657041A576F8E00D7D6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D657051A576F8E00D7D6EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D657071A576F8E00D7D6EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		70D657011A576F8E00D7D6EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70D657001A576F8E00D7D6EC /* Tips.app */,
+				70D657001A576F8E00D7D6EC /* Gratuity.app */,
 				70D657151A576F8E00D7D6EC /* TipsTests.xctest */,
 			);
 			name = Products;
@@ -129,7 +129,7 @@
 			);
 			name = Tips;
 			productName = Tips;
-			productReference = 70D657001A576F8E00D7D6EC /* Tips.app */;
+			productReference = 70D657001A576F8E00D7D6EC /* Gratuity.app */;
 			productType = "com.apple.product-type.application";
 		};
 		70D657141A576F8E00D7D6EC /* TipsTests */ = {
@@ -168,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 70D656FB1A576F8E00D7D6EC /* Build configuration list for PBXProject "Tips" */;
+			buildConfigurationList = 70D656FB1A576F8E00D7D6EC /* Build configuration list for PBXProject "Gratuity" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -338,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tips/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Gratuity;
 			};
 			name = Debug;
 		};
@@ -348,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tips/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Gratuity;
 			};
 			name = Release;
 		};
@@ -389,7 +389,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		70D656FB1A576F8E00D7D6EC /* Build configuration list for PBXProject "Tips" */ = {
+		70D656FB1A576F8E00D7D6EC /* Build configuration list for PBXProject "Gratuity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				70D6571D1A576F8E00D7D6EC /* Debug */,
