@@ -13,7 +13,29 @@ Eight hours spent in total
 #### Notes
 Spent time trying to adjust the numeric format of the selected tip percentage. `tipPercentLabel.text = String(format: "%g percent tip", showTip)` prints "percent" instead of "%" because I couldn't figure out how to couple the additional "%" to "%g%"
 
-Couldn't implement an animation block that contained the initial state and the final state, zero to one, in the same block. Instead, the code for both states rest onLoad and onEditingChanged, respectively.
+Used 
+```
+let duration = 1.0 // animation will take 1.0 seconds 
+UIView.animateWithDuration(duration, {
+    // any changes entered in this block will be animated
+            
+})
+```
+in lieu of
+```
+// Optionally initialize the property to a desired starting value
+self.firstView.alpha = 0
+self.secondView.alpha = 1
+UIView.animateWithDuration(0.4, animations: {
+    // This causes first view to fade in and second view to fade out
+    self.firstView.alpha = 1
+    self.secondView.alpha = 0
+})
+```
+
+Couldn't implement an animation block that contained the initial state and the final state, zero to one, in the same block. 
+
+Instead, the code for both states rest in `viewDidLoad()` and `onEditingChanged()`, respectively.
 
 #### Walkthrough of all user stories
 
