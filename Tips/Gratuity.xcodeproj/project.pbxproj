@@ -367,7 +367,7 @@
 				INFOPLIST_FILE = TipsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tips.app/Tips";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gratuity.app/Gratuity";
 			};
 			name = Debug;
 		};
@@ -382,7 +382,7 @@
 				INFOPLIST_FILE = TipsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tips.app/Tips";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gratuity.app/Gratuity";
 			};
 			name = Release;
 		};
