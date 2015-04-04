@@ -11,8 +11,18 @@ import UIKit
 class CalcViewController: UIViewController {
 
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var finalLabel: UILabel!
+    @IBOutlet weak var splitLabel: UILabel!
+    @IBOutlet weak var tipLabel: UILabel!
+    
+    @IBOutlet weak var tipStepper: UIStepper!
+    @IBOutlet weak var splitStepper: UIStepper!
     
     var isEditing: Bool! = false
+    var expression: String! = "um..." // text when calc value is nil
+    
+    var tipStepperValue: Double! = 18
+    var splitStepperValue: Double! = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +30,10 @@ class CalcViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         totalLabel.text = "0"
+        tipStepper.value = 18
+        splitStepper.value = 1
+
+        updateLabels()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,20 +41,24 @@ class CalcViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func updateLabels() {
+        tipLabel.text = "\(tipStepperValue) percent is $20.00"
+        splitLabel.text = "split \(splitStepperValue) ways"
+        finalLabel.text = totalLabel.text
+    }
+    
     @IBAction func numberPressed(sender: AnyObject) {
         println("pressed \(sender.currentTitle)")
         var number = sender.currentTitle
-        
         if (isEditing==false ){ //
             totalLabel.text = number
             isEditing = true
-        } else if (totalLabel.text == "EMPTY") {
+        } else if (totalLabel.text == expression) {
             totalLabel.text = number
         } else { // add number to end of string
            totalLabel.text = totalLabel.text! + number!!
         }
-        
-        
+        updateLabels()
     }
     
     @IBAction func deletePressed(sender: AnyObject) {
@@ -50,11 +68,26 @@ class CalcViewController: UIViewController {
         println("\(stringLength)")
         
         if (stringLength == 1) {
-            totalLabel.text = "EMPTY"
+            totalLabel.text = expression
+        } else if (totalLabel.text == expression) {
+            // nothing
         } else {
             billAmount = dropLast(billAmount)
             totalLabel.text = billAmount
         }
+        updateLabels()
+    }
+    
+    @IBAction func tipStepper(sender: UIStepper) {
+        println("tapped tipStepper")
+        tipStepperValue = sender.value
+        updateLabels()
+    }
+    
+    @IBAction func splitStepper(sender: UIStepper) {
+        println("tapped splitStepper")
+        splitStepperValue = sender.value
+        updateLabels()
     }
     
     /*

@@ -166,20 +166,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 percent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fik-gb-6Eb">
-                                <rect key="frame" x="173" y="149" width="84" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="IMc-eu-p1N">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="IMc-eu-p1N" userLabel="tipStepper">
                                 <rect key="frame" x="17" y="145" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="tipStepper:" destination="mkp-Jy-tIL" eventType="valueChanged" id="HSR-CY-gEc"/>
+                                </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=": $20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="08m-uw-ndN">
-                                <rect key="frame" x="265" y="149" width="39" height="21"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="jyg-tY-7Bo" userLabel="splitStepper">
+                                <rect key="frame" x="16" y="195" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="splitStepper:" destination="mkp-Jy-tIL" eventType="valueChanged" id="KZi-o7-f1f"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120 total" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jKX-r9-zdC">
+                                <rect key="frame" x="128" y="238" width="176" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -322,22 +326,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="jyg-tY-7Bo">
-                                <rect key="frame" x="17" y="189" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
-                            </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="split two ways" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MVP-yC-2pM">
-                                <rect key="frame" x="195" y="189" width="109" height="21"/>
+                                <rect key="frame" x="129" y="195" width="175" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120 total" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jKX-r9-zdC">
-                                <rect key="frame" x="227" y="238" width="77" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 percent is $20.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fik-gb-6Eb">
+                                <rect key="frame" x="129" y="149" width="175" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -345,6 +344,11 @@
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="finalLabel" destination="jKX-r9-zdC" id="Cgn-Uo-X5g"/>
+                        <outlet property="splitLabel" destination="MVP-yC-2pM" id="m12-z1-qEd"/>
+                        <outlet property="splitStepper" destination="jyg-tY-7Bo" id="eez-Yb-DP5"/>
+                        <outlet property="tipLabel" destination="Fik-gb-6Eb" id="N8O-VD-bTI"/>
+                        <outlet property="tipStepper" destination="IMc-eu-p1N" id="TWB-VX-Uq8"/>
                         <outlet property="totalLabel" destination="HoW-WZ-d6d" id="vv9-be-7QV"/>
                         <segue destination="viA-aj-peB" kind="modal" identifier="summarySegue" id="zky-Ch-1IQ"/>
                     </connections>
