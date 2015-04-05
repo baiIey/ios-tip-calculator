@@ -42,7 +42,7 @@ class CalcViewController: UIViewController {
     }
     
     func updateLabels() {
-        tipLabel.text = "\(tipStepperValue) percent is $20.00"
+        tipLabel.text = "\(tipStepperValue)% is $20.00"
         splitLabel.text = "split \(splitStepperValue) ways"
         finalLabel.text = totalLabel.text
     }

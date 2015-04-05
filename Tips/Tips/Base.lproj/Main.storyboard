@@ -3,6 +3,25 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Cousine-Regular.ttf">
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+            <string>Cousine</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -160,39 +179,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HoW-WZ-d6d" userLabel="totalLabel">
-                                <rect key="frame" x="12" y="32" width="292" height="89"/>
+                                <rect key="frame" x="12" y="25" width="292" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18% is $20.00" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fik-gb-6Eb">
+                                <rect key="frame" x="114" y="141" width="190" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="IMc-eu-p1N" userLabel="tipStepper">
-                                <rect key="frame" x="17" y="145" width="94" height="29"/>
+                                <rect key="frame" x="12" y="139" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="tipStepper:" destination="mkp-Jy-tIL" eventType="valueChanged" id="HSR-CY-gEc"/>
                                 </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="jyg-tY-7Bo" userLabel="splitStepper">
-                                <rect key="frame" x="16" y="195" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="splitStepper:" destination="mkp-Jy-tIL" eventType="valueChanged" id="KZi-o7-f1f"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120 total" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jKX-r9-zdC">
-                                <rect key="frame" x="128" y="238" width="176" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OYn-79-glm">
                                 <rect key="frame" x="49" y="302" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,7 +215,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X0B-en-dwe">
                                 <rect key="frame" x="147" y="302" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -216,7 +227,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KYz-Xz-YIj">
                                 <rect key="frame" x="242" y="302" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,7 +239,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IsX-eh-ivh">
                                 <rect key="frame" x="49" y="364" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -240,7 +251,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k8l-6K-Zlc">
                                 <rect key="frame" x="147" y="364" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="5">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -252,7 +263,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KAB-8X-vQU">
                                 <rect key="frame" x="242" y="364" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="6">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -264,7 +275,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KbY-aT-5IS">
                                 <rect key="frame" x="49" y="429" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="7">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,7 +287,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RSA-OK-S0d">
                                 <rect key="frame" x="147" y="429" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="8">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -288,7 +299,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qNE-D8-EEN">
                                 <rect key="frame" x="242" y="429" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="9">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,7 +311,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k9A-g8-mGq">
                                 <rect key="frame" x="147" y="493" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="32"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="0">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -310,9 +321,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FXF-Vy-FP3">
-                                <rect key="frame" x="230" y="493" width="52" height="34"/>
+                                <rect key="frame" x="226" y="491" width="62" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="27"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="del">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -326,18 +337,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="split two ways" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MVP-yC-2pM">
-                                <rect key="frame" x="129" y="195" width="175" height="21"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="jyg-tY-7Bo" userLabel="splitStepper">
+                                <rect key="frame" x="12" y="187" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="splitStepper:" destination="mkp-Jy-tIL" eventType="valueChanged" id="KZi-o7-f1f"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="split two ways" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MVP-yC-2pM">
+                                <rect key="frame" x="129" y="191" width="175" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 percent is $20.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fik-gb-6Eb">
-                                <rect key="frame" x="129" y="149" width="175" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120 total" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jKX-r9-zdC">
+                                <rect key="frame" x="128" y="237" width="176" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
