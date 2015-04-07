@@ -55,8 +55,29 @@ class CalcViewController: UIViewController {
         
         // printing
         tipLabel.text = "\(tipStepperFormat)% is $\(tipPercenteFormat)"
-        splitLabel.text = String(format: "split %g ways", splitStepperValue)
         finalLabel.text = String(format: "$%.2f", payMath)
+        
+        if (splitStepperValue == 1) {
+            splitLabel.text = "don't split bill"
+        } else if (splitStepperValue == 2) {
+            splitLabel.text = "split two ways"
+        } else if (splitStepperValue == 3) {
+            splitLabel.text = "split three ways"
+        } else if (splitStepperValue == 4) {
+            splitLabel.text = "split four ways"
+        } else if (splitStepperValue == 5) {
+            splitLabel.text = "split five ways"
+        } else if (splitStepperValue == 6) {
+            splitLabel.text = "split six ways"
+        } else if (splitStepperValue == 7) {
+            splitLabel.text = "split seven ways"
+        } else if (splitStepperValue == 8) {
+            splitLabel.text = "split eight ways"
+        } else if (splitStepperValue == 9) {
+            splitLabel.text = "split nine ways"
+        } else {
+            splitLabel.text = String(format: "split %g ways", splitStepperValue)
+        }
     }
     
     @IBAction func numberPressed(sender: AnyObject) {
