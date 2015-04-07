@@ -14,6 +14,8 @@ class CalcViewController: UIViewController {
     @IBOutlet weak var finalLabel: UILabel!
     @IBOutlet weak var splitLabel: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var numberButton: UIButton!
+    @IBOutlet var calcView: UIView!
     
     @IBOutlet weak var tipStepper: UIStepper!
     @IBOutlet weak var splitStepper: UIStepper!
@@ -21,8 +23,11 @@ class CalcViewController: UIViewController {
     var isEditing: Bool! = false
     var expression: String! = "um..." // text when calc value is nil
     
-    var tipStepperValue: Double! = 18
-    var splitStepperValue: Double! = 2
+    var tipStepperValue: Double! = 18 // stored stepper values
+    var splitStepperValue: Double! = 1
+    
+    var typeColor: UIColor! = UIColor.whiteColor()
+    var backgroundColor: UIColor! = UIColor.blackColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +35,7 @@ class CalcViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         totalLabel.text = "0"
-        tipStepper.value = 18
+        tipStepper.value = 18 // displayed stepper values
         splitStepper.value = 1
 
         updateLabels()
@@ -42,9 +47,17 @@ class CalcViewController: UIViewController {
     }
     
     func updateLabels() {
-        tipLabel.text = "\(tipStepperValue)% is $20.00"
+        // math!
+        var enteredValue = NSString(string: totalLabel.text!).doubleValue
+        var tipPercentMath = (tipStepperValue / 100) * enteredValue
+        var splitMath = (enteredValue + tipPercentMath) / splitStepperValue
+        
+        // formating
+        
+        // printing
+        tipLabel.text = "\(tipStepperValue)% is $\(tipPercentMath)"
         splitLabel.text = "split \(splitStepperValue) ways"
-        finalLabel.text = totalLabel.text
+        finalLabel.text = "$\((enteredValue + tipPercentMath) / splitStepperValue)"
     }
     
     @IBAction func numberPressed(sender: AnyObject) {
