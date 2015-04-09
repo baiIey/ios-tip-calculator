@@ -56,8 +56,8 @@ class CalcViewController: UIViewController {
         // printing
         tipLabel.text = "\(tipStepperFormat)% is $\(tipPercenteFormat)"
         finalLabel.text = String(format: "$%.2f", payMath)
-        
-        if (splitStepperValue == 1) {
+    
+        if (splitStepperValue == 1) { // use text for split values less than ten
             splitLabel.text = "don't split bill"
         } else if (splitStepperValue == 2) {
             splitLabel.text = "split two ways"
@@ -102,6 +102,19 @@ class CalcViewController: UIViewController {
         
         if (stringLength == 1) {
             totalLabel.text = expression
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.tipStepper.alpha = 0
+                self.splitStepper.alpha = 0
+                self.finalLabel.alpha = 0
+                self.splitLabel.alpha = 0
+                self.tipLabel.alpha = 0
+            }, completion: { (True) -> Void in
+                self.tipStepper.hidden = true
+                self.splitStepper.hidden = true
+                self.finalLabel.hidden = true
+                self.splitLabel.hidden = true
+                self.tipLabel.hidden = true
+            })
         } else if (totalLabel.text == expression) {
             // nothing
         } else {
