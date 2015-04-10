@@ -89,14 +89,14 @@ class ViewController: UIViewController {
         tipPercentLabel.text = String(format: "%g percent tip", showTip) // g is for general numbers
         
         // animation
-        UIView.animateWithDuration(0.5, {
+        UIView.animateWithDuration(0.5, animations: {
             // collapse box from full screen to top region
             self.billField.frame = CGRect(x: 0, y: 0, width: 320, height: 125)
             })
         
         // fade-in elements when user uses keyboard
         let duration = 1.5  // animation will take 1.0 seconds
-        UIView.animateWithDuration(duration, {
+        UIView.animateWithDuration(duration, animations: {
             // any changes entered in this block will be animated
             // animation block from http://mathewsanders.com/prototyping-iOS-iPhone-iPad-animations-in-swift/
             // fade-in elements
