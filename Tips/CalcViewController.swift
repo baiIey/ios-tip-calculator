@@ -36,6 +36,8 @@ class CalcViewController: UIViewController {
         tipStepper.value = 18 // displayed stepper values
         splitStepper.value = 1
         
+        // Setup keypad borders
+        
         // hide controls on load
         self.tipStepper.hidden = true
         self.splitStepper.hidden = true
@@ -132,6 +134,7 @@ class CalcViewController: UIViewController {
     
     @IBAction func numberPressed(sender: AnyObject) {
         println("pressed \(sender.currentTitle)")
+        
         var number = sender.currentTitle
         var numberString : String! = number
         if (isEditing==false && numberString=="0"){
