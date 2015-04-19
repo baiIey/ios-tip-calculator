@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>61625DDE-6417-4C52-B484-1A2A1877E8C7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Gratuity</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>FB014E15A0213E8B650A70B5DE5ECB7D0FB86CF7</key>
 		<string>https://github.com/baiIey/ios-tip-calculator.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Tips/Gratuity.xcodeproj</string>
+	<string>Tips/Gratuity.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FB014E15A0213E8B650A70B5DE5ECB7D0FB86CF7</key>

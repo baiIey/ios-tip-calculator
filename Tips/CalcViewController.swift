@@ -34,7 +34,7 @@ class CalcViewController: UIViewController {
     @IBOutlet weak var tipStepper: UIStepper!
     @IBOutlet weak var splitStepper: UIStepper!
     
-    var accentColor : UIColor! = UIColor(red: 255/255, green: 255/225, blue: 255/225, alpha: 0.5)
+    var accentColor : UIColor! = UIColor(red: 255/255, green: 255/225, blue: 255/225, alpha: 0.7)
     var cornerRadius : CGFloat! = 32
     var keySize : CGSize! = CGSize(width: 65, height: 65)
     
@@ -60,6 +60,8 @@ class CalcViewController: UIViewController {
         key0.layer.borderWidth = 1.5
         key0.layer.borderColor = accentColor.CGColor
         key0.frame.size = keySize
+        key0.setTitleColor(accentColor, forState: UIControlState.Normal)
+        key0.setTitleColor(UIColor.clearColor(), forState: UIControlState.Highlighted)
         
         key1.backgroundColor = UIColor.clearColor()
         key1.layer.cornerRadius = cornerRadius
@@ -116,6 +118,10 @@ class CalcViewController: UIViewController {
         key9.frame.size = keySize
         // end keypad setup
         
+        // style 
+        detailViewButton.layer.cornerRadius = 12.5
+        detailViewButton.backgroundColor = UIColor.whiteColor()
+        
         // make $0 large on initial load
         self.totalLabel.transform = CGAffineTransformMakeScale(1.5, 1.5)
         self.totalLabel.frame.origin.y = 75
@@ -133,7 +139,7 @@ class CalcViewController: UIViewController {
         self.tipLabel.alpha = 0
 
         updateLabels()
-        
+        detailViewAnimation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -276,11 +282,11 @@ class CalcViewController: UIViewController {
         tipStepperValue = sender.value
         updateLabels()
         
-        if (tipStepperValue >= 18){
+        if (tipStepperValue >= 15){
             UIView.animateWithDuration(animationTiming, animations: { () -> Void in
                 self.calcView.backgroundColor = UIColor(red: 15/255, green: 157/255, blue: 88/255, alpha: 1) // green
             })
-        } else if (tipStepperValue <= 17){
+        } else if (tipStepperValue <= 14){
             UIView.animateWithDuration(animationTiming, animations: { () -> Void in
                 self.calcView.backgroundColor = UIColor(red: 198/255, green: 18/255, blue: 11/255, alpha: 1) // red
             })
@@ -305,12 +311,20 @@ class CalcViewController: UIViewController {
     
     @IBAction func detailViewButtonDidPress(sender: UITapGestureRecognizer) {
         println("tapped detail view button")
+        let blurEffect: UIBlurEffect = UIBlurEffect(style: .Dark)
+        
+        let blurView: UIVisualEffectView = UIVisualEffectView(effect: blurEffect)
+        blurView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.view.addSubview(blurView)
     }
     
     func detailViewAnimation(){
-        UIView.animateWithDuration(animationTiming, animations: { () -> Void in
-            self.animationTiming
-        })
+        UIView.animateWithDuration(animationTiming, delay: 0.0, options: .Repeat | .Autoreverse | .AllowUserInteraction, animations: { () -> Void in
+            self.detailViewButton.transform = CGAffineTransformMakeScale(1.2, 1.2)
+        }) { (Bool) -> Void in
+            // intentially empty
+        }
+
     }
 
 }
