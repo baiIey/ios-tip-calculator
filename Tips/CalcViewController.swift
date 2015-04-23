@@ -16,6 +16,8 @@ class CalcViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet var calcView: UIView!
     @IBOutlet weak var detailViewButton: UIView!
+    @IBOutlet weak var billLabel: UILabel!
+    
     
     // keypad outlets
     @IBOutlet weak var key0: UIButton!
@@ -34,8 +36,8 @@ class CalcViewController: UIViewController {
     @IBOutlet weak var tipStepper: UIStepper!
     @IBOutlet weak var splitStepper: UIStepper!
     
-    var accentColor : UIColor! = UIColor(red: 255/255, green: 255/225, blue: 255/225, alpha: 0.7)
-    var cornerRadius : CGFloat! = 32
+    var accentColor : UIColor! = UIColor.clearColor()
+    var cornerRadius : CGFloat! = 0
     var keySize : CGSize! = CGSize(width: 65, height: 65)
     
     var isEditing: Bool! = false
@@ -47,6 +49,9 @@ class CalcViewController: UIViewController {
     
     var animationTiming : Double = 0.8 // animation timing
     
+    var frameWidth : UInt32 = 320 // device viewport width
+    var frameHeight : UInt32 = 568 // device viewport height
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,68 +59,115 @@ class CalcViewController: UIViewController {
         tipStepper.value = 18 // displayed stepper values
         splitStepper.value = 1
         
+        keySize = CGSize(width: Int(frameWidth/3), height: 65)
+        
+        frameWidth = UInt32(self.view.frame.width)
+        frameHeight = UInt32(self.view.frame.height)
+        var borderWidth : CGFloat = 1 // button border width
+        var keyBackgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.15) // button background color
+        var keyTextColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 0.75) // button label color
+        
         // Setup keypad borders
-        key0.backgroundColor = UIColor.clearColor()
+        keyDel.backgroundColor = keyBackgroundColor
+        keyDel.layer.cornerRadius = cornerRadius
+        keyDel.layer.borderWidth = borderWidth
+        keyDel.layer.borderColor = accentColor.CGColor
+        keyDel.frame.size = keySize
+        keyDel.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        keyDel.frame.origin.x = CGFloat((frameWidth/3)*2 + (UInt32(borderWidth)*2))
+        keyDel.frame.origin.y = CGFloat(frameHeight - UInt32(keySize.height))
+        
+        key0.backgroundColor = keyBackgroundColor
         key0.layer.cornerRadius = cornerRadius
-        key0.layer.borderWidth = 1.5
+        key0.layer.borderWidth = borderWidth
         key0.layer.borderColor = accentColor.CGColor
-        key0.frame.size = keySize
-        key0.setTitleColor(accentColor, forState: UIControlState.Normal)
-        key0.setTitleColor(UIColor.clearColor(), forState: UIControlState.Highlighted)
+        key0.frame.size.width = CGFloat(((frameWidth/3)*2) + UInt32(borderWidth))
+        key0.frame.size.height = keySize.height
+        key0.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        key0.titleEdgeInsets = UIEdgeInsets(top: 0, left: -(CGFloat(frameWidth/3)), bottom: 0, right: 0)
+        key0.frame.origin.x = 0
+        key0.frame.origin.y = CGFloat(frameHeight - UInt32(keySize.height))
         
-        key1.backgroundColor = UIColor.clearColor()
+        key1.backgroundColor = keyBackgroundColor
         key1.layer.cornerRadius = cornerRadius
-        key1.layer.borderWidth = 1.5
+        key1.layer.borderWidth = borderWidth
         key1.layer.borderColor = accentColor.CGColor
+        key1.setTitleColor(keyTextColor, forState: UIControlState.Normal)
         key1.frame.size = keySize
+        key1.frame.origin.x = 0
+        key1.frame.origin.y = CGFloat(frameHeight - (UInt32(keySize.height)*4) - (UInt32(borderWidth)*3))
         
-        key2.backgroundColor = UIColor.clearColor()
+        key2.backgroundColor = keyBackgroundColor
         key2.layer.cornerRadius = cornerRadius
-        key2.layer.borderWidth = 1.5
+        key2.layer.borderWidth = borderWidth
         key2.layer.borderColor = accentColor.CGColor
         key2.frame.size = keySize
-        
-        key3.backgroundColor = UIColor.clearColor()
+        key2.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        key2.frame.origin.x = CGFloat(frameWidth/3 + UInt32(borderWidth))
+        key2.frame.origin.y = CGFloat(frameHeight - (UInt32(keySize.height)*4) - (UInt32(borderWidth)*3))
+
+        key3.backgroundColor = keyBackgroundColor
         key3.layer.cornerRadius = cornerRadius
-        key3.layer.borderWidth = 1.5
+        key3.layer.borderWidth = borderWidth
         key3.layer.borderColor = accentColor.CGColor
         key3.frame.size = keySize
+        key3.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        key3.frame.origin.x = CGFloat((frameWidth/3)*2 + (UInt32(borderWidth)*2))
+        key3.frame.origin.y = CGFloat(frameHeight - (UInt32(keySize.height)*4) - (UInt32(borderWidth)*3))
         
-        key4.backgroundColor = UIColor.clearColor()
+        key4.backgroundColor = keyBackgroundColor
         key4.layer.cornerRadius = cornerRadius
-        key4.layer.borderWidth = 1.5
+        key4.layer.borderWidth = borderWidth
         key4.layer.borderColor = accentColor.CGColor
         key4.frame.size = keySize
+        key4.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        key4.frame.origin.x = 0
+        key4.frame.origin.y = CGFloat(frameHeight - (UInt32(keySize.height)*3) - (UInt32(borderWidth)*2))
         
-        key5.backgroundColor = UIColor.clearColor()
+        key5.backgroundColor = keyBackgroundColor
         key5.layer.cornerRadius = cornerRadius
-        key5.layer.borderWidth = 1.5
+        key5.layer.borderWidth = borderWidth
         key5.layer.borderColor = accentColor.CGColor
         key5.frame.size = keySize
+        key5.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        key5.frame.origin.x = CGFloat(frameWidth/3 + UInt32(borderWidth))
+        key5.frame.origin.y = CGFloat(frameHeight - (UInt32(keySize.height)*3) - (UInt32(borderWidth)*2))
         
-        key6.backgroundColor = UIColor.clearColor()
+        key6.backgroundColor = keyBackgroundColor
         key6.layer.cornerRadius = cornerRadius
-        key6.layer.borderWidth = 1.5
+        key6.layer.borderWidth = borderWidth
         key6.layer.borderColor = accentColor.CGColor
         key6.frame.size = keySize
+        key6.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        key6.frame.origin.x = CGFloat((frameWidth/3)*2 + (UInt32(borderWidth)*2))
+        key6.frame.origin.y = CGFloat(frameHeight - (UInt32(keySize.height)*3) - (UInt32(borderWidth)*2))
         
-        key7.backgroundColor = UIColor.clearColor()
+        key7.backgroundColor = keyBackgroundColor
         key7.layer.cornerRadius = cornerRadius
-        key7.layer.borderWidth = 1.5
+        key7.layer.borderWidth = borderWidth
         key7.layer.borderColor = accentColor.CGColor
         key7.frame.size = keySize
+        key7.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        key7.frame.origin.x = 0
+        key7.frame.origin.y = CGFloat(frameHeight - (UInt32(keySize.height)*2) - UInt32(borderWidth))
         
-        key8.backgroundColor = UIColor.clearColor()
+        key8.backgroundColor = keyBackgroundColor
         key8.layer.cornerRadius = cornerRadius
-        key8.layer.borderWidth = 1.5
+        key8.layer.borderWidth = borderWidth
         key8.layer.borderColor = accentColor.CGColor
         key8.frame.size = keySize
+        key8.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        key8.frame.origin.x = CGFloat(frameWidth/3 + UInt32(borderWidth))
+        key8.frame.origin.y = CGFloat(frameHeight - (UInt32(keySize.height)*2) - UInt32(borderWidth))
         
-        key9.backgroundColor = UIColor.clearColor()
+        key9.backgroundColor = keyBackgroundColor
         key9.layer.cornerRadius = cornerRadius
-        key9.layer.borderWidth = 1.5
+        key9.layer.borderWidth = borderWidth
         key9.layer.borderColor = accentColor.CGColor
         key9.frame.size = keySize
+        key9.setTitleColor(keyTextColor, forState: UIControlState.Normal)
+        key9.frame.origin.x = CGFloat((frameWidth/3)*2 + (UInt32(borderWidth)*2))
+        key9.frame.origin.y = CGFloat(frameHeight - (UInt32(keySize.height)*2) - UInt32(borderWidth))
         // end keypad setup
         
         // style 
@@ -132,11 +184,13 @@ class CalcViewController: UIViewController {
         self.finalLabel.hidden = true
         self.splitLabel.hidden = true
         self.tipLabel.hidden = true
+        self.detailViewButton.hidden = true
         self.tipStepper.alpha = 0
         self.splitStepper.alpha = 0
         self.finalLabel.alpha = 0
         self.splitLabel.alpha = 0
         self.tipLabel.alpha = 0
+        self.detailViewButton.alpha = 0
 
         updateLabels()
         detailViewAnimation()
@@ -163,28 +217,38 @@ class CalcViewController: UIViewController {
         // printing
         totalLabel.text = "$\(totalBillFormat)"
         tipLabel.text = "\(tipStepperFormat)% is $\(tipPercentFormat)"
-        finalLabel.text = "you pay \(payoutFormat)"
+//        finalLabel.text = "you pay \(payoutFormat)"
     
         if (splitStepperValue == 1) { // use text for split values less than ten
             splitLabel.text = "don't split bill"
+            finalLabel.text = "you pay \(payoutFormat)"
         } else if (splitStepperValue == 2) {
             splitLabel.text = "split two ways"
+            finalLabel.text = "each pays \(payoutFormat)"
         } else if (splitStepperValue == 3) {
             splitLabel.text = "split three ways"
+            finalLabel.text = "each pays \(payoutFormat)"
         } else if (splitStepperValue == 4) {
             splitLabel.text = "split four ways"
+            finalLabel.text = "each pays \(payoutFormat)"
         } else if (splitStepperValue == 5) {
             splitLabel.text = "split five ways"
+            finalLabel.text = "each pays \(payoutFormat)"
         } else if (splitStepperValue == 6) {
             splitLabel.text = "split six ways"
+            finalLabel.text = "each pays \(payoutFormat)"
         } else if (splitStepperValue == 7) {
             splitLabel.text = "split seven ways"
+            finalLabel.text = "each pays \(payoutFormat)"
         } else if (splitStepperValue == 8) {
             splitLabel.text = "split eight ways"
+            finalLabel.text = "each pays \(payoutFormat)"
         } else if (splitStepperValue == 9) {
             splitLabel.text = "split nine ways"
+            finalLabel.text = "each pays \(payoutFormat)"
         } else {
             splitLabel.text = String(format: "split %g ways", splitStepperValue)
+            finalLabel.text = "each pays \(payoutFormat)"
         }
     }
     
@@ -195,27 +259,35 @@ class CalcViewController: UIViewController {
             self.finalLabel.alpha = 0
             self.splitLabel.alpha = 0
             self.tipLabel.alpha = 0
+            self.detailViewButton.alpha = 0
+            self.billLabel.hidden = false
+            self.billLabel.alpha = 0.8
             }, completion: { (True) -> Void in
                 self.tipStepper.hidden = true
                 self.splitStepper.hidden = true
                 self.finalLabel.hidden = true
                 self.splitLabel.hidden = true
                 self.tipLabel.hidden = true
+                self.detailViewButton.hidden = true
         })
     }
     
     func fadeInControls(){
         UIView.animateWithDuration(animationTiming, animations: { () -> Void in
-            self.tipStepper.alpha = 1
-            self.splitStepper.alpha = 1
-            self.finalLabel.alpha = 1
-            self.splitLabel.alpha = 1
-            self.tipLabel.alpha = 1
+            self.tipStepper.alpha = 0.8
+            self.splitStepper.alpha = 0.8
+            self.finalLabel.alpha = 0.8
+            self.splitLabel.alpha = 0.8
+            self.tipLabel.alpha = 0.8
+            self.detailViewButton.alpha = 0.8
+            self.billLabel.alpha = 0
             self.tipStepper.hidden = false
             self.splitStepper.hidden = false
             self.finalLabel.hidden = false
             self.splitLabel.hidden = false
             self.tipLabel.hidden = false
+            self.detailViewButton.hidden = false
+            self.billLabel.hidden = true
             }, completion: { (True) -> Void in
         })
     }
