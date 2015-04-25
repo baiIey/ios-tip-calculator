@@ -267,7 +267,7 @@
                                 <rect key="frame" x="33" y="200" width="254" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <string key="text">A $100.00 bill? Well, tipping the staff 18 percent comes out to $20.00, which comes out to $100 total. Sharing the costs two ways means each person pays $60.00.</string>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
