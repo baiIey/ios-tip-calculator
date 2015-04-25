@@ -3,159 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Cousine-Regular.ttf">
-            <string>Cousine</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Gratuity" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qxx-ha-pHq">
-                                <rect key="frame" x="16" y="232" width="37" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Ux-3l-PfI">
-                                <rect key="frame" x="107" y="232" width="197" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" id="fDS-J8-euu">
-                                <rect key="frame" x="16" y="275" width="288" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="t43-ci-3GH">
-                                <rect key="frame" x="16" y="148" width="288" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="18%"/>
-                                    <segment title="20%"/>
-                                    <segment title="22%"/>
-                                </segments>
-                                <color key="tintColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="MWD-TP-WXn"/>
-                                </connections>
-                            </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$ Bill amount" textAlignment="right" minimumFontSize="17" id="i6h-ZB-az7">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="45"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="laI-7G-Dl4"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two ways" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2FP-58-8PE">
-                                <rect key="frame" x="16" y="357" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three ways" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9CD-l2-xNv">
-                                <rect key="frame" x="16" y="405" width="89" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Four ways" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kuw-Op-YN9">
-                                <rect key="frame" x="16" y="454" width="81" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8MZ-7q-B7t">
-                                <rect key="frame" x="16" y="197" width="123" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B7Z-ax-4bA">
-                                <rect key="frame" x="147" y="197" width="157" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Trm-qN-uxf">
-                                <rect key="frame" x="112" y="357" width="192" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K5z-cc-2ic">
-                                <rect key="frame" x="112" y="405" width="192" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mPf-df-ge2">
-                                <rect key="frame" x="112" y="454" width="192" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split bill ▾" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ucV-Qc-Wbf">
-                                <rect key="frame" x="16" y="306" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.063056591349999996" green="0.48190369900000002" blue="0.40295149060000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="ZmG-tZ-QOM" appends="YES" id="uZd-SQ-MRo"/>
-                        </connections>
-                    </view>
-                    <connections>
-                        <outlet property="billField" destination="i6h-ZB-az7" id="afz-Jv-Jd1"/>
-                        <outlet property="fourWayLabel" destination="mPf-df-ge2" id="Vx5-bP-V0e"/>
-                        <outlet property="fourWayStaticLabel" destination="kuw-Op-YN9" id="3J5-Sq-EO7"/>
-                        <outlet property="horzRule" destination="fDS-J8-euu" id="T3h-2X-o5k"/>
-                        <outlet property="splitBillLabel" destination="ucV-Qc-Wbf" id="8oV-hV-MOQ"/>
-                        <outlet property="threeWayLabel" destination="K5z-cc-2ic" id="Dxl-Vh-04k"/>
-                        <outlet property="threeWayStaticLabel" destination="9CD-l2-xNv" id="6eB-I6-sFe"/>
-                        <outlet property="tipControl" destination="t43-ci-3GH" id="01V-5s-vRv"/>
-                        <outlet property="tipLabel" destination="B7Z-ax-4bA" id="4nI-Q3-D5U"/>
-                        <outlet property="tipPercentLabel" destination="8MZ-7q-B7t" id="2Br-3o-bRw"/>
-                        <outlet property="totalLabel" destination="3Ux-3l-PfI" id="Gf5-2e-bUS"/>
-                        <outlet property="totalStaticLabel" destination="Qxx-ha-pHq" id="aod-i8-p27"/>
-                        <outlet property="twoWayLabel" destination="Trm-qN-uxf" id="WpA-UK-4eQ"/>
-                        <outlet property="twoWayStaticLabel" destination="2FP-58-8PE" id="dWc-7c-9D7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ZmG-tZ-QOM">
-                    <connections>
-                        <action selector="onTap:" destination="vXZ-lx-hvc" id="R37-2D-vUr"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="234" y="321"/>
-        </scene>
         <!--Calculator-->
         <scene sceneID="H8C-oe-lE4">
             <objects>
@@ -316,15 +164,6 @@
                                     <action selector="deletePressed:" destination="mkp-Jy-tIL" eventType="touchUpInside" id="quf-jR-2mg"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="gMS-YI-fVn" userLabel="detailView">
-                                <rect key="frame" x="276" y="25" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="zVU-Vg-vJi" appends="YES" id="fFq-PU-HMf"/>
-                                </connections>
-                            </view>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="9999" id="jyg-tY-7Bo" userLabel="splitStepper">
                                 <rect key="frame" x="16" y="181" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -361,6 +200,15 @@
                                 <color key="textColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" id="gMS-YI-fVn" userLabel="detailView">
+                                <rect key="frame" x="275" y="25" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zVU-Vg-vJi" appends="YES" id="fFq-PU-HMf"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.078431372549019607" green="0.094117647058823528" blue="0.10196078431372549" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -386,7 +234,7 @@
                         <outlet property="tipLabel" destination="Fik-gb-6Eb" id="N8O-VD-bTI"/>
                         <outlet property="tipStepper" destination="IMc-eu-p1N" id="TWB-VX-Uq8"/>
                         <outlet property="totalLabel" destination="HoW-WZ-d6d" id="vv9-be-7QV"/>
-                        <segue destination="viA-aj-peB" kind="modal" identifier="summarySegue" id="zky-Ch-1IQ"/>
+                        <segue destination="viA-aj-peB" kind="modal" identifier="summarySegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" animates="NO" id="zky-Ch-1IQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMs-oq-0zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -406,26 +254,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="vPc-Ib-gXa">
-                                <rect key="frame" x="270" y="0.0" width="50" height="50"/>
+                            <view contentMode="scaleToFill" id="vPc-Ib-gXa" userLabel="calcViewButton">
+                                <rect key="frame" x="275" y="25" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.078431372549019607" green="0.094117647058823528" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pzU-iu-Uel" appends="YES" id="dHS-bv-Y8g"/>
+                                </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1JJ-xc-VOW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1JJ-xc-VOW" userLabel="billSummary">
                                 <rect key="frame" x="33" y="200" width="254" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <string key="text">A $100.00 bill? Well, tipping the staff 18 percent comes out to $20.00, which comes out to $100 total. Sharing the costs two ways means each person pays $60.00.</string>
-                                <fontDescription key="fontDescription" name="Cousine" family="Cousine" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.094117647060000004" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.8980392157" green="1" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="billSummary" destination="1JJ-xc-VOW" id="4Q8-ni-ufL"/>
+                        <outlet property="calcViewButton" destination="vPc-Ib-gXa" id="4QD-rv-h35"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gi9-wb-7Se" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pzU-iu-Uel">
+                    <connections>
+                        <action selector="calcViewDidTap:" destination="viA-aj-peB" id="VES-gG-6mV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1256" y="321"/>
+            <point key="canvasLocation" x="1213" y="321"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		70D657061A576F8E00D7D6EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D657051A576F8E00D7D6EC /* AppDelegate.swift */; };
-		70D657081A576F8E00D7D6EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D657071A576F8E00D7D6EC /* ViewController.swift */; };
 		70D6570B1A576F8E00D7D6EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D657091A576F8E00D7D6EC /* Main.storyboard */; };
 		70D6570D1A576F8E00D7D6EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D6570C1A576F8E00D7D6EC /* Images.xcassets */; };
 		70D657101A576F8E00D7D6EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70D6570E1A576F8E00D7D6EC /* LaunchScreen.xib */; };
@@ -35,7 +34,6 @@
 		70D657001A576F8E00D7D6EC /* Gratuity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gratuity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D657041A576F8E00D7D6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D657051A576F8E00D7D6EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70D657071A576F8E00D7D6EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70D6570A1A576F8E00D7D6EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70D6570C1A576F8E00D7D6EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		70D6570F1A576F8E00D7D6EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			children = (
 				70D657091A576F8E00D7D6EC /* Main.storyboard */,
 				D476CDDC1ACE09B5002381C6 /* CalcViewController.swift */,
-				70D657071A576F8E00D7D6EC /* ViewController.swift */,
 				D476CDDE1ACF1DB7002381C6 /* SummaryViewController.swift */,
 				70D657051A576F8E00D7D6EC /* AppDelegate.swift */,
 				70D6570C1A576F8E00D7D6EC /* Images.xcassets */,
@@ -238,7 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70D657081A576F8E00D7D6EC /* ViewController.swift in Sources */,
 				D476CDDD1ACE09B5002381C6 /* CalcViewController.swift in Sources */,
 				70D657061A576F8E00D7D6EC /* AppDelegate.swift in Sources */,
 				D476CDDF1ACF1DB7002381C6 /* SummaryViewController.swift in Sources */,

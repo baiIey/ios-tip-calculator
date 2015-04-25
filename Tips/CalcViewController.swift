@@ -18,7 +18,6 @@ class CalcViewController: UIViewController {
     @IBOutlet weak var detailViewButton: UIView!
     @IBOutlet weak var billLabel: UILabel!
     
-    
     // keypad outlets
     @IBOutlet weak var key0: UIButton!
     @IBOutlet weak var key1: UIButton!
@@ -172,7 +171,7 @@ class CalcViewController: UIViewController {
         
         // style 
         detailViewButton.layer.cornerRadius = 12.5
-        detailViewButton.backgroundColor = UIColor.whiteColor()
+        detailViewButton.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1)
         
         // make $0 large on initial load
         self.totalLabel.transform = CGAffineTransformMakeScale(1.5, 1.5)
@@ -199,6 +198,10 @@ class CalcViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        detailViewButton.transform = CGAffineTransformMakeScale(1.0, 1.0)
     }
     
     func updateLabels(){
@@ -279,7 +282,7 @@ class CalcViewController: UIViewController {
             self.finalLabel.alpha = 0.8
             self.splitLabel.alpha = 0.8
             self.tipLabel.alpha = 0.8
-            self.detailViewButton.alpha = 0.8
+            self.detailViewButton.alpha = 1
             self.billLabel.alpha = 0
             self.tipStepper.hidden = false
             self.splitStepper.hidden = false
@@ -383,11 +386,17 @@ class CalcViewController: UIViewController {
     
     @IBAction func detailViewButtonDidPress(sender: UITapGestureRecognizer) {
         println("tapped detail view button")
-        let blurEffect: UIBlurEffect = UIBlurEffect(style: .Dark)
+//        let blurEffect: UIBlurEffect = UIBlurEffect(style: .Dark)
+//        
+//        let blurView: UIVisualEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurView.setTranslatesAutoresizingMaskIntoConstraints(false)
+//        self.view.addSubview(blurView)
         
-        let blurView: UIVisualEffectView = UIVisualEffectView(effect: blurEffect)
-        blurView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.view.addSubview(blurView)
+        UIView.animateWithDuration(0.4, delay: 0.0, options: nil, animations: { () -> Void in
+            self.detailViewButton.transform = CGAffineTransformMakeScale(50, 50)
+        }) { (Bool) -> Void in
+            self.performSegueWithIdentifier("summarySegue", sender: self)
+        }
     }
     
     func detailViewAnimation(){
@@ -396,7 +405,6 @@ class CalcViewController: UIViewController {
         }) { (Bool) -> Void in
             // intentially empty
         }
-
     }
 
 }
