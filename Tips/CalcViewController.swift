@@ -45,6 +45,10 @@ class CalcViewController: UIViewController {
     var tipStepperValue: Double! = 18 // stored stepper values
     var splitStepperValue: Double! = 1
     var totalBill : String! = "0"
+    var tipPercentFormat : String! = "Tip Percent Format"
+    var tipStepperFormat : String! = "Tip Stepper Format"
+    var payoutFormat : String! = "Payout Format"
+    var totalAmount : String! = "Total Amount"
     
     var animationTiming : Double = 0.8 // animation timing
     
@@ -190,9 +194,6 @@ class CalcViewController: UIViewController {
         self.splitLabel.alpha = 0
         self.tipLabel.alpha = 0
         self.detailViewButton.alpha = 0
-
-        updateLabels()
-        detailViewAnimation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -202,6 +203,10 @@ class CalcViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         detailViewButton.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        UIApplication.sharedApplication().statusBarStyle = .LightContent // set status bar color
+        
+        updateLabels()
+        detailViewAnimation()
     }
     
     func updateLabels(){
@@ -210,12 +215,14 @@ class CalcViewController: UIViewController {
         var tipPercentMath = (tipStepperValue / 100) * enteredValue
         var splitMath = (enteredValue + tipPercentMath) / splitStepperValue
         var payMath = (enteredValue + tipPercentMath) / splitStepperValue
+        var totalMath = (enteredValue + tipPercentMath)
         
         // formating
-        var tipStepperFormat = String(format: "%g", tipStepperValue)
-        var tipPercentFormat = String(format: "%.2f", tipPercentMath)
+        tipStepperFormat = String(format: "%g", tipStepperValue)
+        tipPercentFormat = String(format: "%.2f", tipPercentMath)
         var totalBillFormat = String(format: "%.2f", enteredValue)
-        var payoutFormat = String(format: "$%.2f", payMath)
+        payoutFormat = String(format: "$%.2f", payMath)
+        totalAmount = String(format: "$%.2f", totalMath)
         
         // printing
         totalLabel.text = "$\(totalBillFormat)"
@@ -397,6 +404,20 @@ class CalcViewController: UIViewController {
         }) { (Bool) -> Void in
             self.performSegueWithIdentifier("summarySegue", sender: self)
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        var destinationViewController = segue.destinationViewController as! SummaryViewController
+        // pass data
+        destinationViewController.buttonColor = self.calcView.backgroundColor!
+        
+        destinationViewController.billAmount = self.totalLabel.text!
+        destinationViewController.tipPercent = self.tipStepperFormat
+        destinationViewController.tipAmount = self.tipPercentFormat
+        destinationViewController.totalAmount = self.totalAmount
+        destinationViewController.splitMath = self.splitLabel.text!
+        destinationViewController.splitAmount = self.payoutFormat
+        destinationViewController.splitStepperValue = self.splitStepperValue
     }
     
     func detailViewAnimation(){

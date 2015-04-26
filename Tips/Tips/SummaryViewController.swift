@@ -13,21 +13,42 @@ class SummaryViewController: UIViewController {
     @IBOutlet weak var calcViewButton: UIView!
     @IBOutlet weak var billSummary: UILabel!
     
+    var buttonColor : UIColor = UIColor.whiteColor()
+    
+    var billAmount : String = "$120"
+    var tipPercent : String = "18%"
+    var tipAmount : String = "20"
+    var totalAmount : String = "$140"
+    
+    var splitMath = "2"
+    var splitAmount : String = "$70"
+    var splitStepperValue : Double = 1
+    
     var animationTiming : Double = 0.8 // animation timing
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        
     }
     
     override func viewWillAppear(animated: Bool) {
         // style
         calcViewButton.layer.cornerRadius = 12.5
-        
         calcViewAnimation()
+        UIApplication.sharedApplication().statusBarStyle = .Default  // set status bar color
+        
+        // pass data
+        calcViewButton.backgroundColor = buttonColor
+        updateText()
+    }
+    
+    func updateText(){
+        if (splitStepperValue == 1) {
+            billSummary.text = "A \(billAmount) bill? Well, tipping the staff \(tipPercent) percent is $\(tipAmount), which is \(totalAmount) total."
+        } else {
+            billSummary.text = "A \(billAmount) bill? Well, tipping the staff \(tipPercent) percent is $\(tipAmount), which is \(totalAmount) total. When \(splitMath) each person pays \(splitAmount)."
+        }
     }
 
     override func didReceiveMemoryWarning() {
