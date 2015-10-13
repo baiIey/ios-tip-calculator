@@ -13,6 +13,7 @@
 		70D0B1A01A50EE4A0065D035 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D0B19F1A50EE4A0065D035 /* Images.xcassets */; };
 		70D0B1A31A50EE4A0065D035 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70D0B1A11A50EE4A0065D035 /* LaunchScreen.xib */; };
 		70D0B1AF1A50EE4A0065D035 /* TipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0B1AE1A50EE4A0065D035 /* TipsTests.swift */; };
+		D461062A1B1E21750048F932 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D46106291B1E21750048F932 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		70D0B1A81A50EE4A0065D035 /* TipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D0B1AD1A50EE4A0065D035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D0B1AE1A50EE4A0065D035 /* TipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTests.swift; sourceTree = "<group>"; };
+		D46106291B1E21750048F932 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		70D0B18A1A50EE4A0065D035 = {
 			isa = PBXGroup;
 			children = (
+				D46106291B1E21750048F932 /* Default-568h@2x.png */,
 				70D0B1951A50EE4A0065D035 /* Tips */,
 				70D0B1AB1A50EE4A0065D035 /* TipsTests */,
 				70D0B1941A50EE4A0065D035 /* Products */,
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70D0B19E1A50EE4A0065D035 /* Main.storyboard in Resources */,
+				D461062A1B1E21750048F932 /* Default-568h@2x.png in Resources */,
 				70D0B1A31A50EE4A0065D035 /* LaunchScreen.xib in Resources */,
 				70D0B1A01A50EE4A0065D035 /* Images.xcassets in Resources */,
 			);
@@ -404,6 +408,7 @@
 				70D0B1B41A50EE4A0065D035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70D0B1B51A50EE4A0065D035 /* Build configuration list for PBXNativeTarget "TipsTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +417,7 @@
 				70D0B1B71A50EE4A0065D035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
