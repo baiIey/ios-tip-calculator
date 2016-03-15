@@ -41,7 +41,7 @@ UIView.animateWithDuration(0.4, animations: {
 
 ### Walkthrough of all user stories
 
-![Video Walkthrough](gratuity-walkthru.gif)
+![Video Walkthrough](gratuity-walkthru-2.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
